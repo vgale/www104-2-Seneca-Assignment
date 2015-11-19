@@ -1,0 +1,136 @@
+/* CSS Document */
+
+/* SASS Variables  */
+$background-color: #fdf2d8;
+$colorh1: #6b1cbc;
+$colorh2: #4d7c77;
+$colorh3: #EF8412;
+
+/* SASS Mixin  */
+@mixin border-radius($radius: 8px) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+/* SASS Functions */
+$myColor: #fdf2d8;
+$myBackground: #e6e6e6;
+
+
+h1 {
+	color: $colorh1;
+	}
+
+h2 {
+	color: $colorh2;
+	color: darken($myBackground, 60%);
+}
+h3 {
+	color:$colorh3;
+	}
+	
+h4 {
+	color:$colorh1;
+	color: darken($myBackground, 60%);
+	}	
+
+#containerflag .Flag{
+	display:inline-block;
+	float:left;
+	clear:both;
+}
+
+.jumbotron  {
+background-color:$background-color;
+background-color:darken($myColor, 5%);
+}
+
+.navbar-inverse{
+	background-image:none;
+	background-color:#338F89;
+}
+
+.nav-pills>li.active>a{
+	background-color:#215D59;
+}
+
+a {
+	color:#C1E2E2;
+}
+
+.nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
+	background-color:#42B9B1;
+}
+
+#logo {
+	float:left;
+	max-width: 250px;
+  height: auto;
+	clear:both;
+}
+
+.carousel  {
+	max-width:880px;
+	max-height:320px;
+	float:left;
+}
+
+.carousel-control {
+	width:0;
+	display:none;
+}
+
+.carousel-indicators {
+	display:none;
+}
+
+#flags {
+	max-width:800px;
+	margin-right:auto;
+	margin-left:auto;
+	margin-top: 24px;
+	background-color:$background-color;
+	@include border-radius;
+}
+
+
+@media only screen and (max-width: 1000px) {
+	
+	.carousel {
+	display:none;
+}
+	
+}
+
+@media only screen and (max-width: 700px) {
+	#logo {
+	float:none;
+	max-width:200px;
+	height:auto;
+	margin-right:auto;
+	margin-left:auto;
+	}
+	
+}
+
+
+@media only screen and (max-width: 480px) {
+	
+	.carousel {
+	display:none;
+}
+
+
+#jumbotrontext {
+	letter-spacing: 0em;
+	font-size:18px;
+	
+}
+
+#logo {
+	max-width:175px;
+	height:auto;
+	}
+}
